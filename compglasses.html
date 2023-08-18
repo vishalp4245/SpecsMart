@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy All Eyeglasses Online</title>
+    <style>
+        *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.top{
+    width: 100%;
+    display: flex;
+    height: 25px;
+    font-size: 14px;
+    text-align: right;
+    justify-content: space-evenly;
+}
+.top > .more{
+    width: 90%;
+    display: flex;
+    padding-left: 5px;
+   /* justify-content: space-evenly; */
+   align-items: center;
+}
+.top > .more > a{
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    /* margin-right: 10px; */
+    margin: 5px;
+    border-left: 1px solid black;
+    padding-left: 6px;
+   margin-top: 10px;
+    font-size: 12px;
+}
+.top > .more > a:hover{
+    text-decoration: underline black solid 1px;
+}
+.top > a{
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    /* margin-right: 10px; */
+    margin: 5px;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.top > a:hover{
+    text-decoration: underline black solid 1px;
+}
+#header{
+ height: 70px;
+  /* background-color: red; */
+  /* border: red solid 2px;  */
+ display: flex;
+ align-items: center;
+ padding: 0px 10px;
+}  
+                               /*  <!-- logo  containe --> */
+.logo{
+    width: 23%;
+}
+.logo > a > img{
+    width: 80%;
+    margin: 10px 0px 0px 20px;
+}
+                                    /* <!-- Search bar --> */
+#search{
+    width: 50%;
+    display: flex;
+    position: relative;
+    margin-left: 5px;
+}
+ .num{
+width: 12%;
+font-size: 20px;
+color: rgb(67, 66, 65);
+    /* margin: 0px 0px 10px 10px; */
+
+}
+form{
+    width: 100%;
+}
+.input{
+    width: 98%;
+    height: 32px;
+    margin: 5px 0px 0px 0px;
+    border-radius: 5px;
+   border-width: 1px;
+   font-size: 15px;
+   padding: 5px;
+}
+.searchRecent{
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    top: 36px;
+    background-color: white;
+    height: 500px;
+    width: 98%;
+    display: none;
+    padding: 0px 0px 10px 15px;
+    border: black solid 1px;
+    border-top: white solid 1px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+#search:focus-within .searchRecent{
+    display: block;
+    background-color: white;
+    color: white;
+   /* background-position: 1px; */
+}
+.searchRecent > p{
+    line-height: 13px;
+    font-size: 18px;
+    color:#24155f;
+    margin-left: 10px;
+    font-weight: lighter;
+}
+.searchRecent > h1{
+    /* line-height: 14px; */
+    color: #0e123c;
+    font-weight: lighter;
+    text-align: left;
+}
+                                   /* <!-- Login&Cart Pages --> */
+.signpage{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly; 
+    margin-left: 30px;
+}
+.signpage > a{
+    text-decoration: none;
+    color: black;
+}
+.formLogin{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    
+}
+
+
+                                 /* <!-- Navigation Part --> */
+#navbar{
+    height: 60px;
+    background-color:rgb(241, 237, 237);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#navpages{
+    height: 60px;
+   /* align-items: center; */
+  padding-top: 20px;
+  /* color: black; */
+  font-size: 15px;
+  margin-left: 15px;
+ 
+}
+#navpages > a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+    height: 100%;
+    position: relative;
+}
+#navpages > a:hover{
+    height: 100%;
+    border-bottom: 3px black solid;
+    padding-bottom: 20px;
+}
+#navicons{
+    margin-right: 30px;
+}
+#navicons > img{
+    width: 70px;
+    padding-top: 13px;
+    margin-left: 3px;
+}  
+
+                     /*------------------------ Submenu Modules -------------------------*/
+
+.subMenu{
+position: absolute;
+width: 1200px;
+height: 400px;
+background-color: red;
+padding-top: 20px;
+margin: 25px 0px 0px 10px;
+display: none;
+/* display: flex; */
+}
+#navpages > a:hover .subMenu{
+    display: block;
+}
+.mainMenu{
+    width: 220px;
+    height: 70px;
+    background-color: blue;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 40px 0px 0px 20px;
+    padding: 0px 10px 10px 5px;
+    text-align: center;
+}
+.mainMenu > h5{
+font-size: 15px;
+margin: 30px 0px 0px 10px;
+}
+.mainMenu > img{
+    width: 45px;
+    /* height: 20px; */
+    border-radius: 40px;
+    margin-top: 15px;
+    /* margin-left: px; */
+}
+.mainMenu > p{
+    margin: 30px 0px 0px 90px;
+    font-weight: bold;
+}
+.off,
+.off > img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ----------------------------------All product CSS part-----------------------------------*/
+.allProduct{
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+#filter{
+    height: 30px;
+    margin: 60px 10px 0px 10px;
+   
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+   border-left: grey solid 2px;
+   border-top:  grey solid 20px;
+   margin-top: 50px;
+   margin-right: 10px;
+}
+.product-container > div{
+    line-height: 5px;
+    padding: 20px 20px;
+    border: grey solid 1px;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px; 
+    margin-left: 20px; 
+    margin-top: 20px;
+    font-weight: lighter;
+    color: #24155f;
+}
+.product-container > div > img{
+    width: 100%;
+}
+.product-container > div > button{
+ width: 90px;
+ height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #24155f;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <header class="top">
+        <div class="more">
+         <a href="#">Do More, Be More</a>
+         <a href="#"> Try in 3D</a>
+         <a href="#"> Store Locator</a>
+         <a href="#"> Quality</a>
+         <a href="#"> USA</a>
+         <a href="#"> Singapor</a>
+         <a href="#"> UAE</a>
+         <a href="#"> John Jacobs</a>
+         <a href="#"> Aqualens</a>
+         <a href="#"> Cobrowsing</a>
+         <a href="#"> Engineering Blog</a>
+         <a href="#"> Lenskart Franchise</a>
+         <a href="#"> Lenskart Optom Partner Program</a>
+        </div>
+         <a href="#">Contact Us</a>
+         </header>
+         <header id="header">
+                                  <!-- logo  containe -->
+             <div class="logo">
+                 <a href="./index.html"><img  src="./img/Specs mart.png" alt=""></a>
+                 
+             </div>
+                              
+                                  <!-- Search bar -->
+             <h1 class="num">1800-111-111</h1>
+             <div id="search">
+                 <form action="">
+                 <input type="text" placeholder="What are you looking for" class="input">
+             </form>
+                 <div class="searchRecent">
+                     <h1>Trending Search</h1>
+                     <p href="#">Ray ban</p>
+                     <p href="#">Eyeglasses</p>
+                     <p href="#">Sunglasses</p>
+                     <p href="#">Contact Lenses</p>
+                     <p href="#">Acuvue</p>
+                     <p href="#">Eyewear Accessories</p>
+                     <p href="#">Oakley</p>
+                     <p href="#">Mens Sunglasses</p>
+                     <p href="#">Women Sunglasses</p>
+                     <p href="#">Aviator</p>
+                     <p href="#">Purevision</p>
+                     <p href="#">Sunpocket - Folding Sunglasses</p>
+                     <p href="#">Eye Checkup</p>
+                    
+                 </div>
+             </div>
+                                  <!-- Login&Cart Pages -->
+             <div class="signpage">
+                 <a href="#">Track Order</a>
+                 <a href="./signup.html" class="formLogin">Sign In & Sign UP</a>
+                 <a href="./wishlist.html">Wishlist</a>
+                 <a href="./cart.html">Cart</a>
+             </div>
+         </header>
+                                 <!-- Navigation Part -->
+         <div id="navbar">
+          <div id="navpages">
+           
+            <a href="./product.html">
+             EYEGLASSES
+              <!-- <div class="subMenu">
+             <div class="mainMenu">
+                <img src=" https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                 <h5>Men</h5>
+                 <p>></p>
+             </div>
+             <div class="mainMenu">
+                <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmZZvH6lWQQznSycRwJuSWihaRkkVaL_GumB-yYh9n&s" alt="">
+                 <h5>Women</h5>
+                 <p>></p>
+             </div>
+             <div class="mainMenu">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS_-3ZH2BfGciLtM6yblr13opybXWM4yCvXs1WZj8NFw&s" alt="">
+                 <h5>Kids</h5>
+                 <p>></p>
+             </div>
+             <div></div>
+             <div></div>
+              </div> -->
+            </a>
+        
+            <a href="./compglasses.html">COMPUTER GLASSES</a>
+         
+            <a href="./product.html">KIDS GLASSES</a>
+         
+            <a href="./compglasses.html">CONTACT LENSES</a>
+         
+            <a href="./product.html">SUNGLASSES</a>
+         
+            <a href="./compglasses.html">HOME EYE-TEST</a>
+         
+            <a href="./compglasses.html">STORE LOCATOR</a>
+         </div>
+          <div id="navicons">
+            <img src="./img/Screenshot (60).png" alt="">
+            <img src="./img/Screenshot (61).png" alt="">
+            <img src="./img/Screenshot (62).png" alt="">
+          </div>
+         </div>
+         <div class="off">
+            <img src="https://static1.lenskart.com/media/desktop/img/Feb23/style/plp/PLP%20Camapaign%20-%20WEB%20(3).jpg" alt="">
+         </div>
+         <div class="allProduct">
+         <select id="filter">
+            <option value="">Filter By Category</option>
+            <option value="Vincent Chase Online">Vincent Chase Online</option>
+            <option value="Lenskart Air Online">Lenskart Air Online</option>
+            <option value="Lenskart READERS">Lenskart READERS</option>
+            <option value="OJOS">OJOS</option>
+            <option value="Vincent Chase">Vincent Chase</option>
+            <option value="Lenskart Air">Lenskart Air</option>
+            <option value="Fallon Colby">Fallon Colby</option>
+          </select>
+   <div class="product-container">
+    <!--------------------------- Append Product Here ----------------------------->
+   </div>
+</div>
+</body>
+<script>
+
+const product = [   
+  {
+  image : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/gunmetal-green-full-rim-round-vincent-chase-sleek-steel-vc-e14716-c2-eyeglasses_g_4086_9_july.jpg", 
+  brands : "Vincent Chase Online",
+  size : "Medium",
+  price : 999,
+  shape : "Rectangle",
+  color : "Gold"
+},
+{
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488107_02_2022.jpg", 
+    "brands" : "Lenskart Air Online",
+    "size" : "Medium",
+    "price" : 1800,
+    "shape" : "Rectangle",
+    "color" : "Gunmetal"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13636-c3-eyeglasses_G_7185.jpg", 
+    "brands" : "Vincent Chase Online",
+    "size" : "Narrow",
+    "price" : 1700,
+    "shape" : "Round",
+    "color" : "Black"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e11058-c2-f-eyeglasses_m_0180_2.jpg", 
+    "brands" : "Lenskart READERS",
+    "size" : "Wide",
+    "price" : 299,
+    "shape" : "Rectangle",
+    "color" : "Brown"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//o/i/ojos-oj-e14895-c2-eyeglasses_g_5631_11_11_2022.jpg", 
+    "brands" : "OJOS",
+    "size" : "Wide",
+    "price" : 1250,
+    "shape" : "Aviator",
+    "color" : "Green"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/black-silver-full-rim-rectangle-vincent-chase-classic-acetate-vc-e14682-c1-eyeglasses_g_0043_08_02_2023.jpg.jpg", 
+    "brands" : "Vincent Chase",
+    "size" : "Extra Narrow",
+    "price" : 1199,
+    "shape" : "Rectangle",
+    "color" : "Blue"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/maroon-black-half-rim-square-lenskart-air-classic-la-e14639-c1-eyeglasses_g_4680_01_08_2022.jpg", 
+    "brands" : "Lenskart Air",
+    "size" : "Medium- Shine On",
+    "price" : 1700,
+    "shape" : "Square",
+    "color" : "Maroon"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//f/a/fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_g_4495.jpg", 
+    "brands" : "Fallon Colby",
+    "size" : "Narrow",
+    "price" : 999,
+    "shape" : "Round",
+    "color" : "Black"
+  },
+
+  {
+  "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/gunmetal-green-full-rim-round-vincent-chase-sleek-steel-vc-e14716-c2-eyeglasses_g_4086_9_july.jpg", 
+  "brands" : "Vincent Chase Online",
+  "size" : "Medium",
+  "price" : 999,
+  "shape" : "Rectangle",
+  "color" : "Gold"
+},
+{
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488107_02_2022.jpg", 
+    "brands" : "Lenskart Air Online",
+    "size" : "Medium",
+    "price" : 1800,
+    "shape" : "Rectangle",
+    "color" : "Gunmetal"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13636-c3-eyeglasses_G_7185.jpg", 
+    "brands" : "Vincent Chase Online",
+    "size" : "Narrow",
+    "price" : 1700,
+    "shape" : "Round",
+    "color" : "Black"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e11058-c2-f-eyeglasses_m_0180_2.jpg", 
+    "brands" : "Lenskart READERS",
+    "size" : "Wide",
+    "price" : 299,
+    "shape" : "Rectangle",
+    "color" : "Brown"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//o/i/ojos-oj-e14895-c2-eyeglasses_g_5631_11_11_2022.jpg", 
+    "brands" : "OJOS",
+    "size" : "Wide",
+    "price" : 1250,
+    "shape" : "Aviator",
+    "color" : "Green"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/black-silver-full-rim-rectangle-vincent-chase-classic-acetate-vc-e14682-c1-eyeglasses_g_0043_08_02_2023.jpg.jpg", 
+    "brands" : "Vincent Chase",
+    "size" : "Extra Narrow",
+    "price" : 1199,
+    "shape" : "Rectangle",
+    "color" : "Blue"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/maroon-black-half-rim-square-lenskart-air-classic-la-e14639-c1-eyeglasses_g_4680_01_08_2022.jpg", 
+    "brands" : "Lenskart Air",
+    "size" : "Medium- Shine On",
+    "price" : 1700,
+    "shape" : "Square",
+    "color" : "Maroon"
+  },
+  {
+    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//f/a/fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_g_4495.jpg", 
+    "brands" : "vincent Chase Online",
+    "size" : "Fallon Colby",
+    "price" : 999,
+    "shape" : "Round",
+    "color" : "Black"
+  },{
+            "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/gunmetal-green-full-rim-round-vincent-chase-sleek-steel-vc-e14716-c2-eyeglasses_g_4086_9_july.jpg", 
+            "brands" : "Vincent Chase Online",
+            "size" : "Medium",
+            "price" : 999,
+            "shape" : "Rectangle",
+            "color" : "Gold"
+          },
+          {
+              "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488107_02_2022.jpg", 
+              "brands" : "Lenskart Air Online",
+              "size" : "Medium",
+              "price" : 1800,
+              "shape" : "Rectangle",
+              "color" : "Gunmetal"
+        },
+         {
+              "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13636-c3-eyeglasses_G_7185.jpg", 
+              "brands" : "Vincent Chase Online",
+              "size" : "Narrow",
+              "price" : 1700,
+              "shape" : "Round",
+              "color" : "Black"
+        },
+         {
+              "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e11058-c2-f-eyeglasses_m_0180_2.jpg", 
+              "brands" : "Lenskart READERS",
+              "size" : "Wide",
+              "price" : 299,
+              "shape" : "Rectangle",
+              "color" : "Brown"
+        },
+        {
+              "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//o/i/ojos-oj-e14895-c2-eyeglasses_g_5631_11_11_2022.jpg", 
+              "brands" : "OJOS",
+              "size" : "Wide",
+              "price" : 1250,
+              "shape" : "Aviator",
+              "color" : "Green"
+        },
+        {
+              "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/black-silver-full-rim-rectangle-vincent-chase-classic-acetate-vc-e14682-c1-eyeglasses_g_0043_08_02_2023.jpg.jpg", 
+              "brands" : "Vincent Chase",
+              "size" : "Extra Narrow",
+              "price" : 1199,
+              "shape" : "Rectangle",
+              "color" : "Blue"
+        },
+        {
+              "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/maroon-black-half-rim-square-lenskart-air-classic-la-e14639-c1-eyeglasses_g_4680_01_08_2022.jpg", 
+              "brands" : "Lenskart Air",
+              "size" : "Medium- Shine On",
+              "price" : 1700,
+              "shape" : "Square",
+              "color" : "Maroon"
+         },
+         {
+              "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//f/a/fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_g_4495.jpg", 
+              "brands" : "vincent Chase Online",
+              "size" : "Fallon Colby",
+              "price" : 999,
+              "shape" : "Round",
+              "color" : "Black"
+        },
+        {
+                "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/gunmetal-green-full-rim-round-vincent-chase-sleek-steel-vc-e14716-c2-eyeglasses_g_4086_9_july.jpg", 
+                "brands" : "Vincent Chase Online",
+                "size" : "Medium",
+                "price" : 999,
+                "shape" : "Rectangle",
+                "color" : "Gold"
+        },
+        {
+                  "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488107_02_2022.jpg", 
+                  "brands" : "Lenskart Air Online",
+                  "size" : "Medium",
+                  "price" : 1800,
+                  "shape" : "Rectangle",
+                  "color" : "Gunmetal"
+        },
+        {
+                  "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13636-c3-eyeglasses_G_7185.jpg", 
+                  "brands" : "Vincent Chase Online",
+                  "size" : "Narrow",
+                  "price" : 1700,
+                  "shape" : "Round",
+                  "color" : "Black"
+        },
+        {
+                  "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e11058-c2-f-eyeglasses_m_0180_2.jpg", 
+                  "brands" : "Lenskart READERS",
+                  "size" : "Wide",
+                  "price" : 299,
+                  "shape" : "Rectangle",
+                  "color" : "Brown"
+        },
+        {
+                  "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//o/i/ojos-oj-e14895-c2-eyeglasses_g_5631_11_11_2022.jpg", 
+                  "brands" : "OJOS",
+                  "size" : "Wide",
+                  "price" : 1250,
+                  "shape" : "Aviator",
+                  "color" : "Green"
+        },
+        {
+          "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/black-silver-full-rim-rectangle-vincent-chase-classic-acetate-vc-e14682-c1-eyeglasses_g_0043_08_02_2023.jpg.jpg", 
+                  "brands" : "Vincent Chase",
+                  "size" : "Extra Narrow",
+                  "price" : 1199,
+                  "shape" : "Rectangle",
+                  "color" : "Blue"
+        },
+        {
+                  "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/maroon-black-half-rim-square-lenskart-air-classic-la-e14639-c1-eyeglasses_g_4680_01_08_2022.jpg", 
+                  "brands" : "Lenskart Air",
+                  "size" : "Medium- Shine On",
+                  "price" : 1700,
+                  "shape" : "Square",
+                  "color" : "Maroon"
+                },
+                {
+                  "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//f/a/fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_g_4495.jpg", 
+                  "brands" : "vincent Chase Online",
+                  "size" : "Fallon Colby",
+                  "price" : 999,
+                  "shape" : "Round",
+                  "color" : "Black"
+                },
+                {
+                    "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/gunmetal-green-full-rim-round-vincent-chase-sleek-steel-vc-e14716-c2-eyeglasses_g_4086_9_july.jpg", 
+                    "brands" : "Vincent Chase Online",
+                    "size" : "Medium",
+                    "price" : 999,
+                    "shape" : "Rectangle",
+                    "color" : "Gold"
+                  },
+                  {
+                      "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488107_02_2022.jpg", 
+                      "brands" : "Lenskart Air Online",
+                      "size" : "Medium",
+                      "price" : 1800,
+                      "shape" : "Rectangle",
+                      "color" : "Gunmetal"
+                    },
+                    {
+                      "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13636-c3-eyeglasses_G_7185.jpg", 
+                      "brands" : "Vincent Chase Online",
+                      "size" : "Narrow",
+                      "price" : 1700,
+                      "shape" : "Round",
+                      "color" : "Black"
+                    },
+                    {
+                      "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e11058-c2-f-eyeglasses_m_0180_2.jpg", 
+                      "brands" : "Lenskart READERS",
+                      "size" : "Wide",
+                      "price" : 299,
+                      "shape" : "Rectangle",
+                      "color" : "Brown"
+                    },
+                    {
+                      "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//o/i/ojos-oj-e14895-c2-eyeglasses_g_5631_11_11_2022.jpg", 
+                      "brands" : "OJOS",
+                      "size" : "Wide",
+                      "price" : 1250,
+                      "shape" : "Aviator",
+                      "color" : "Green"
+                    },
+                    {
+                      "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/black-silver-full-rim-rectangle-vincent-chase-classic-acetate-vc-e14682-c1-eyeglasses_g_0043_08_02_2023.jpg.jpg", 
+                      "brands" : "Vincent Chase",
+                      "size" : "Extra Narrow",
+                      "price" : 1199,
+                      "shape" : "Rectangle",
+                      "color" : "Blue"
+                    },
+                    {
+                      "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/maroon-black-half-rim-square-lenskart-air-classic-la-e14639-c1-eyeglasses_g_4680_01_08_2022.jpg", 
+                      "brands" : "Lenskart Air",
+                      "size" : "Medium- Shine On",
+                      "price" : 1700,
+                      "shape" : "Square",
+                      "color" : "Maroon"
+                    },
+                    {
+                      "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//f/a/fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_fallon-colby-fc-e11874-round-full-rim-c1-eyeglasses_g_4495.jpg", 
+                      "brands" : "vincent Chase Online",
+                      "size" : "Fallon Colby",
+                      "price" : 999,
+                      "shape" : "Round",
+                      "color" : "Black"
+                    },
+                    {
+                        "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/gunmetal-green-full-rim-round-vincent-chase-sleek-steel-vc-e14716-c2-eyeglasses_g_4086_9_july.jpg", 
+                        "brands" : "Vincent Chase Online",
+                        "size" : "Medium",
+                        "price" : 999,
+                        "shape" : "Rectangle",
+                        "color" : "Gold"
+                      },
+                      {
+                          "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488107_02_2022.jpg", 
+                          "brands" : "Lenskart Air Online",
+                          "size" : "Medium",
+                          "price" : 1800,
+                          "shape" : "Rectangle",
+                          "color" : "Gunmetal"
+                        },
+                        {
+                          "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13636-c3-eyeglasses_G_7185.jpg", 
+                          "brands" : "Vincent Chase Online",
+                          "size" : "Narrow",
+                          "price" : 1700,
+                          "shape" : "Round",
+                          "color" : "Black"
+                        },
+                        {
+                          "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e11058-c2-f-eyeglasses_m_0180_2.jpg", 
+                          "brands" : "Lenskart READERS",
+                          "size" : "Wide",
+                          "price" : 299,
+                          "shape" : "Rectangle",
+                          "color" : "Brown"
+                        },
+                        {
+                          "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//o/i/ojos-oj-e14895-c2-eyeglasses_g_5631_11_11_2022.jpg", 
+                          "brands" : "OJOS",
+                          "size" : "Wide",
+                          "price" : 1250,
+                          "shape" : "Aviator",
+                          "color" : "Green"
+                        },
+                        {
+                          "image" : "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/black-silver-full-rim-rectangle-vincent-chase-classic-acetate-vc-e14682-c1-eyeglasses_g_0043_08_02_2023.jpg.jpg", 
+                          "brands" : "Vincent Chase",
+                          "size" : "Extra Narrow",
+                          "price" : 1199,
+                          "shape" : "Rectangle",
+                          "color" : "Blue"
+                        }
+
+  ]
+
+let container = document.querySelector(".product-container")
+let filterdata = document.querySelector("#filter")
+
+
+filterdata.addEventListener("change", () => {
+    if(filterdata.value === ""){
+        displayProduct(product) 
+    }
+    else{
+        let filtered = product.filter((element) => {
+     return element.brands === filterdata.value
+ })
+        displayProduct(filtered)
+    }
+    
+});
+   
+
+ let productData = JSON.parse(localStorage.getItem("cart")) || [];
+
+ let productLike = JSON.parse(localStorage.getItem("wish-list")) || [];
+
+  function displayProduct(product){
+ container.innerHTML = "";
+
+ product.forEach((element, index) => {
+    let card = document.createElement("div");
+
+    let image = document.createElement("img");
+     image.src = element.image;
+
+     let brand =  document.createElement("h3");
+     brand.innerText = element.brands;
+
+     let size = document.createElement("p")
+      size.textContent = "Size:- "+element.size;
+
+      let price = document.createElement("h4")
+      price.textContent = "$"+element.price;
+
+    let add_to_cart = document.createElement("button")
+     add_to_cart.textContent = "Add to cart";
+
+     let wishlist = document.createElement("button")
+     wishlist.textContent = "Wishlist"
+       
+     add_to_cart.addEventListener("click", () => {
+        productData.push(element)
+        localStorage.setItem("cart", JSON.stringify(productData))
+        alert("Product Added To Cart")
+     })
+     
+     wishlist.addEventListener("click", () => {
+        productLike.push(element)
+        localStorage.setItem("wish-list", JSON.stringify(productLike))
+        alert("Product Added To Wishlist")
+     })
+
+    card.append(image, brand, size, price, add_to_cart, wishlist )
+    container.append(card);
+
+ });
+  }
+  displayProduct(product)
+</script>
+</html>

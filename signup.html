@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In page</title>
+    <style>
+        /* .formLogin:focus-within .loginSign {
+    display: block;
+} */
+               /*----------------------------------- signupCSS -------------------------------------*/
+.form{
+    position: absolute;
+    margin: auto;
+    right: 350px;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    border: #24155f solid 1px;
+    /* display: none; */
+    margin-top: 30px;
+}
+/* .form.signup{
+    opacity: 0;
+    pointer-events: none;
+} */
+.loginForm > img{
+    width: 497px;
+    border-radius: 20px;
+}
+.loginForm > a > button{
+  position: absolute;
+  margin: 20px 0px 300px 0px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: white;
+  border-color: white;
+}
+.formfeild{
+    padding-left: 40px;
+}
+.formfeild > p{
+    font-size: 15px;
+    padding-left: 5px;
+    color: #331d8a;
+    /* margin-top: 0px; */
+}
+.feildInp{ 
+    margin-bottom: 20px;
+    font-size: 23px;
+    margin-top: 0;
+    color: #24155f;
+    margin-top: 0px;
+    line-height: 15px;
+}
+.inpLogin{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+   border-width: 1px;
+   padding-left: 20px;
+   margin-bottom: 0px;
+}
+.btn-feild > button{
+    margin-bottom: 10px;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    border: rgb(167, 163, 163);
+    background-color:  rgb(167, 163, 163);
+    color: #24155f;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.create-feild{
+    display: flex;
+    /* padding-top: 10px; */
+    color: #24155f;
+    padding-left: 40px;
+    margin-left: 20px;
+}
+.sign-link{
+    text-decoration: underline 1px;
+    color: #24155f;
+    /* margin-left: 20px; */
+}
+
+    </style>
+</head>
+<body>
+   
+    <div class="form loginSign">
+        <div class="loginForm">
+            <img src="https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg" alt="">
+           <a href="./index.html"><button>X</button></a>
+           
+           
+         <form action="#" class="formfeild">
+            <div class="feildInp">
+                <p>Sign In</p>
+                <input type="email number" class="inpLogin" placeholder="Mobile/Email">
+            </div>
+            <p>Get update on Whatsapp</p>
+            <div class="btn-feild">
+            <!-- <input type="submit" value="Sign In"> -->
+            <button type="button" onclick="SignIn()">Sign In</button>
+        </div>
+         </form>
+
+         <div class="create-feild">
+            <span>New Member?</span>
+          <a href="./signin.html" class=" links sign-link">Create an Account</a>
+           
+        </div>
+        </div>
+    </div>
+</body>
+<script>
+   
+
+ function SignIn(){
+
+let inpEmailMob = document.querySelector(".inpLogin").value;
+
+ let email = localStorage.getItem("email");
+ let mobile = localStorage.getItem("mobile");
+
+    if(inpEmailMob === email || inpEmailMob === mobile){
+
+        window.location.href = "cart.html"
+
+        alert("Signed In Successful")
+       
+    }
+    else {
+        alert("Please enter incorrect email/mobile")
+        
+    }
+}
+
+</script>
+</html>

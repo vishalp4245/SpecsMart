@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Sunglasses, Contact Lens, Eyeglasses, Frames, Buy 1 Get 1 Offer for Gold Members</title>
+    <style>
+   *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.top{
+    width: 100%;
+    display: flex;
+    height: 25px;
+    font-size: 14px;
+    text-align: right;
+    justify-content: space-evenly;
+}
+.top > .more{
+    width: 90%;
+    display: flex;
+    padding-left: 5px;
+   /* justify-content: space-evenly; */
+   align-items: center;
+}
+.top > .more > a{
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    /* margin-right: 10px; */
+    margin: 5px;
+    border-left: 1px solid black;
+    padding-left: 6px;
+   margin-top: 10px;
+    font-size: 12px;
+}
+.top > .more > a:hover{
+    text-decoration: underline black solid 1px;
+}
+.top > a{
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    /* margin-right: 10px; */
+    margin: 5px;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.top > a:hover{
+    text-decoration: underline black solid 1px;
+}
+#header{
+ height: 70px;
+  /* background-color: red; */
+  /* border: red solid 2px;  */
+ display: flex;
+ align-items: center;
+ padding: 0px 10px;
+}  
+                               /*  <!-- logo  containe --> */
+.logo{
+    width: 23%;
+}
+.logo > a > img{
+    width: 80%;
+    margin: 10px 0px 0px 20px;
+}
+                                    /* <!-- Search bar --> */
+#search{
+    width: 50%;
+    display: flex;
+    position: relative;
+    margin-left: 5px;
+}
+.num{
+    width: 12%;
+    font-size: 20px;
+    color: rgb(67, 66, 65);
+        /* margin: 0px 0px 10px 10px; */
+        font-weight: bold;
+    
+    }
+form{
+    width: 100%;
+}
+.input{
+    width: 98%;
+    height: 32px;
+    margin: 5px 0px 0px 0px;
+    border-radius: 5px;
+   border-width: 1px;
+   font-size: 15px;
+   padding: 5px;
+}
+.searchRecent{
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    top: 36px;
+    background-color: white;
+    height: 500px;
+    width: 98%;
+    display: none;
+    padding: 0px 0px 10px 15px;
+    border: black solid 1px;
+    border-top: white solid 1px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+#search:focus-within .searchRecent{
+    display: block;
+    background-color: white;
+    color: white;
+   /* background-position: 1px; */
+}
+.searchRecent > p{
+    line-height: 13px;
+    font-size: 18px;
+    color:#24155f;
+    margin-left: 10px;
+    font-weight: lighter;
+}
+.searchRecent > h1{
+    /* line-height: 14px; */
+    color: #0e123c;
+    font-weight: lighter;
+    text-align: left;
+}
+                                   /* <!-- Login&Cart Pages --> */
+.signpage{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly; 
+    margin-left: 30px;
+}
+.signpage > a{
+    text-decoration: none;
+}
+.signpage > a > h5{
+    color: black;
+    /* margin-top: 50px; */
+    font-size: 15px;
+    font-weight: lighter;
+    position: relative;
+}
+
+                       /* <!-- Navigation Part --> */
+                       #navbar{
+                        height: 60px;
+                        background-color:rgb(241, 237, 237);
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    #navpages{
+                        height: 60px;
+                       /* align-items: center; */
+                      padding-top: 20px;
+                      /* color: black; */
+                      font-size: 15px;
+                      margin-left: 15px;
+                     
+                    }
+                    #navpages > a{
+                        text-decoration: none;
+                        margin-left: 10px;
+                        color: black;
+                        height: 100%;
+                        position: relative;
+                    }
+                    #navpages > a:hover{
+                        height: 100%;
+                        border-bottom: 3px black solid;
+                        padding-bottom: 20px;
+                    }
+                    #navicons{
+                        margin-right: 30px;
+                    }
+                    #navicons > img{
+                        width: 70px;
+                        padding-top: 13px;
+                        margin-left: 3px;
+                    }  
+/* ---------------------------------------All Product CSS part------------------------------------------------- */
+.product-container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+   margin-top: 50px;
+   margin-left: 10px;
+}
+.product-container > div{
+    line-height: 5px;
+    padding: 20px 20px;
+    border: grey solid 1px;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    margin-top: 20px;
+    font-weight: lighter;
+    color: #24155f;
+}
+.product-container > div > img{
+    width: 100%;
+}
+.product-container > div > button{
+ width: 90px;
+ height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #24155f;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <header class="top">
+        <div class="more">
+         <a href="#">Do More, Be More</a>
+         <a href="#"> Try in 3D</a>
+         <a href="#"> Store Locator</a>
+         <a href="#"> Quality</a>
+         <a href="#"> USA</a>
+         <a href="#"> Singapor</a>
+         <a href="#"> UAE</a>
+         <a href="#"> John Jacobs</a>
+         <a href="#"> Aqualens</a>
+         <a href="#"> Cobrowsing</a>
+         <a href="#"> Engineering Blog</a>
+         <a href="#"> Lenskart Franchise</a>
+         <a href="#"> Lenskart Optom Partner Program</a>
+        </div>
+         <a href="#">Contact Us</a>
+         </header>
+         <header id="header">
+                                  <!-- logo  containe -->
+             <div class="logo">
+                 <a href="./index.html"><img  src="./img/Specs mart.png" alt=""></a>       
+             </div>
+                              
+                                  <!-- Search bar -->
+             <h1 class="num">1800-111-111</h1>
+             <div id="search">
+                 <form action="">
+                 <input type="text" placeholder="What are you looking for" class="input">
+             </form>
+                 <div class="searchRecent">
+                     <h1>Trending Search</h1>
+                     <p href="#">Ray ban</p>
+                     <p href="#">Eyeglasses</p>
+                     <p href="#">Sunglasses</p>
+                     <p href="#">Contact Lenses</p>
+                     <p href="#">Acuvue</p>
+                     <p href="#">Eyewear Accessories</p>
+                     <p href="#">Oakley</p>
+                     <p href="#">Mens Sunglasses</p>
+                     <p href="#">Women Sunglasses</p>
+                     <p href="#">Aviator</p>
+                     <p href="#">Purevision</p>
+                     <p href="#">Sunpocket - Folding Sunglasses</p>
+                     <p href="#">Eye Checkup</p>
+                    
+                 </div>
+             </div>
+                                  <!-- Login&Cart Pages -->
+             <div class="signpage">
+                 <a href="#"><h5>Track Order</h5></a>
+                 <a href="./signup.html" class="formLogin">
+                     <h5>Sign In & Sign UP</h5>
+             </a>
+                 <a href="./wishlist.html"><h5>Wishlist</h5></a>
+                 <a href="./cart.html"><h5>Cart</h5></a>
+             </div>
+         </header>
+                                 <!-- Navigation Part -->
+         <div id="navbar">
+          <div id="navpages">
+           
+            <a href="./product.html">
+             EYEGLASSES
+            </a>
+        
+            <a href="./compglasses.html">COMPUTER GLASSES</a>
+         
+            <a href="./product.html">KIDS GLASSES</a>
+         
+            <a href="./compglasses.html">CONTACT LENSES</a>
+         
+            <a href="./product.html">SUNGLASSES</a>
+         
+            <a href="./compglasses.html">HOME EYE-TEST</a>
+         
+            <a href="./compglasses.html">STORE LOCATOR</a>
+         </div>
+          <div id="navicons">
+            <img src="./img/Screenshot (60).png" alt="">
+            <img src="./img/Screenshot (61).png" alt="">
+            <img src="./img/Screenshot (62).png" alt="">
+          </div>
+         </div>
+     
+                                  <!-- cart page -->
+ 
+   <div class="product-container">
+    <!--------------------------- Append Product Here ----------------------------->
+   </div>
+</body>
+<script>
+
+
+let productLike = JSON.parse(localStorage.getItem("wish-list")) || [];
+
+    let container = document.querySelector(".product-container");
+
+    
+    function displayProduct(productLike){
+        container.innerHTML = "";
+
+     productLike.forEach((element, index) => {
+    let card = document.createElement("div");
+
+    let image = document.createElement("img");
+     image.src = element.image;
+
+     let brand =  document.createElement("h3");
+     brand.innerText = element.brands;
+
+     let size = document.createElement("p")
+      size.textContent = "Size:- "+element.size;
+
+      let price = document.createElement("h4")
+      price.textContent = "$"+element.price;
+
+    let deletebtn = document.createElement("button")
+    deletebtn.textContent = "Remove";
+
+       
+    deletebtn.addEventListener("click", (ele) => {
+        productLike.splice(ele, 1)
+        displayProduct(productLike)
+        localStorage.setItem("wish-list", JSON.stringify(productLike))     
+     })
+     
+    card.append(image, brand, size, price, deletebtn )
+    container.append(card);
+  
+    // document.querySelector(".btn").style.display= "none"
+ });
+// let sum = 0;
+// for(let i=0; i<productData.length; i++){
+//     sum += productData[i].price
+// }
+// total.textContent = sum;
+// count.textContent = productData.length;
+
+// if(productData == ""){
+//         document.querySelector(".total").style.display = "none";
+//         document.querySelector(".btn").style.display= "block"
+//     }
+}
+    displayProduct(productLike)
+</script>
+</html>

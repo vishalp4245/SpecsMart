@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <style>
+        
+                     /*---------------------------------- signupCss ---------------------------------------*/
+.form{
+    margin: auto;
+    right: 350px;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* display: none; */
+    padding: 3px 0px 10px 30px;
+    position: absolute;
+    margin-top: 30px;
+}
+.signup > a > button{
+  position: absolute;
+  margin: 0px 0px 400px 0px;
+  top: 10px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: white;
+  border-color: white;
+}
+.signinp > div{
+    margin-top: 10px;
+    padding-left: 30px;
+}
+
+.name,
+.lastname,
+.mobile,
+.email,
+.password{
+    width: 380px;
+    height: 40px;
+    border-radius: 10px;
+   border-width: 1px;
+   padding-left: 20px;
+   margin-bottom: 0px;
+}
+.signinp > a{
+    margin-left: 40px;
+    color: #0e123c;
+    font-size: 15px;
+    /* margin-top: 10px; */
+    line-height: 4px;
+}
+.signinp > p{
+    margin-left: 40px;
+    color: gray;
+    font-size: 15px;
+}
+.signinp > .policy{
+    margin-left: 40px;
+    color: #24155f;
+    font-size: 13px;
+}
+.signinp > button{
+    margin-bottom: 10px;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    border: rgb(167, 163, 163);
+    background-color:  rgb(167, 163, 163);
+    color: #24155f;
+    font-weight: bold;
+    margin-left: 40px;
+}
+.acc{
+   margin-left: 150px;
+}
+.signup > h1{
+    margin-left: 40px;
+    font-weight: lighter;
+     font-size: 20px;
+     color: #24155f;
+}
+
+    </style>
+</head>
+<body>
+   
+                                  <!-- Login&Cart Pages -->
+             <!-- <div class="signpage">
+                 <a href="#">Track Order</a>
+                 <a href="./signup.html" class="formLogin">Sign In & Sign UP</a>
+                 <a href="#">Wishlist</a>
+                 <a href="#">Cart</a>
+             </div>
+         </header> -->
+    <div class="form signup">
+        <h1>Create an Account</h1>
+        <a href="./index.html"><button>X</button></a> 
+        <form action="#" class="signinp">        
+            <div>
+            <input type="text" class="name" placeholder="First Name*">
+        </div>
+            <div>
+            <input type="text" class="lastname" placeholder="Last Name*">
+        </div>
+            <div>
+            <input type="number" class="mobile" placeholder="Mobile*">
+        </div>
+            <div>
+            <input type="email" class="email" placeholder="Email*">
+        </div>
+            <div>
+            <input type="password" class="password" placeholder="Password*">
+        </div>
+        <a href="#">Got a Referral Code? <span>(Optinal)</span></a>
+
+        <p>Get update on Whatsapp</p>
+
+        <p class="policy">By creating this account, you agree to our <a href="#">Privacy Policy</a></p>
+
+        <!-- <input  type="submit" value="Create an Account" /> -->
+        <button type="button" onclick="signUp()">Create an Account</button>
+        </form>
+        <div>
+            <span class="acc">Have an Account ? <a href="./signup.html" class="links ">Sign In</a></span>
+        </div>
+    </div>
+</body>
+<script>
+    // let form = document.querySelector(".signinp");
+
+//     let signInlist = JSON.parse(localStorage.getItem("signIn-list"))||[];
+
+    let tag = document.querySelector(".signup > h1");
+
+function signUp(){
+    let nameEl = document.querySelector(".name").value;
+    let lastnameEl = document.querySelector(".lastname").value;
+    let mobileEl = document.querySelector(".mobile").value;
+    let emailEl = document.querySelector(".email").value;
+    let passwordEl = document.querySelector(".password").value;
+    
+    if(nameEl == "" || lastnameEl == "" ||mobileEl == "" ||emailEl == "" ||passwordEl =="" ){
+    alert("Enter your details")
+   }else{
+
+    localStorage.setItem("name", nameEl);
+    localStorage.setItem("lastname", lastnameEl);
+    localStorage.setItem("mobile", mobileEl);
+    localStorage.setItem("email", emailEl);
+    localStorage.setItem("password", passwordEl);
+
+     tag.textContent = "Signed In Successfully"
+   }
+ 
+}
+    
+
+
+</script>
+</html>

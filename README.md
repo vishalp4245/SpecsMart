@@ -1,2 +1,2 @@
-# SpecsMart
-E-Commerce Project
+# exotic-minute-882
+Project
