@@ -8,7 +8,6 @@ let imageArr = [
     "https://static1.lenskart.com/media/desktop/img/Feb23/23feb/jj-flash/HP-Web.gif",
     "https://static1.lenskart.com/media/desktop/img/Feb23/23feb/wedding%20edit/web-home.gif",
     "https://static1.lenskart.com/media/desktop/img/Dec22/new-collection/desktop.gif"
-
 ]
 
 let previous = document.querySelector(".prev")
